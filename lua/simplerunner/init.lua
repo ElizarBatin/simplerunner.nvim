@@ -8,7 +8,6 @@ function M.setup(opts)
   vim.api.nvim_buf_set_lines(buf, 0, -1, true, {"test", "text"})
 
   local o = {
-    relative = "editor",
     width = 10,
     anchor = "NW",
     split = "left"

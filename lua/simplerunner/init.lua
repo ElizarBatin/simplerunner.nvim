@@ -19,7 +19,7 @@ function my_help_opener(help_str)
     }
   end
 
-  nvim.api.open_buffer(nvim.api.make_help_buffer(help_str), win_open_spec)
+  vim.api.open_buffer(vim.api.make_help_buffer(help_str), win_open_spec)
 end
 
 function M.setup(opts)

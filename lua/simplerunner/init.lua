@@ -9,9 +9,9 @@ function M.setup(opts)
   vim.api.nvim_buf_set_name(buf, "SimpleRunner")
 
   local o = {
-    width = 10,
+    width = 15,
     anchor = "NW",
-    split = "left"
+    split = "right"
   }
   local win = vim.api.nvim_open_win(buf, false, o)
 end

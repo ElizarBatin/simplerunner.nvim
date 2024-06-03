@@ -6,7 +6,7 @@ function M.setup(opts)
   print("Hello world!")
   local buf = vim.api.nvim_create_buf(false, true)
   vim.api.nvim_buf_set_lines(buf, 0, -1, true, {"test", "text"})
-  vim.api.nvim_buf_set_option(buf, "readonly", true)
+  vim.api.nvim_buf_set_option(buf, "name", "SimpleRunner")
 
   local o = {
     width = 10,

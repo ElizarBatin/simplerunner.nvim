@@ -6,6 +6,7 @@ function M.setup(opts)
   print("Hello world!")
   local handle = io.popen("whoami")
   local result = handle:read("*a")
+  print(result)
   handle:close()
 
   local buf = vim.api.nvim_create_buf(false, true)

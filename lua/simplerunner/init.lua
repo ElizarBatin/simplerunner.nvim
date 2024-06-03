@@ -8,13 +8,13 @@ function M.setup(opts)
   vim.api.nvim_buf_set_lines(buf, 0, -1, true, {"test", "text"})
 
   local o = {
-    "relative" = "cursor",
-    "width" = 10,
-    "height" =  2,
-    "col" = 0,
-    "row" = 1,
-    "anchor" = "NW",
-    "style" = "minimal"
+    relative = "cursor",
+    width = 10,
+    height =  2,
+    col = 0,
+    row = 1,
+    anchor = "NW",
+    style = "minimal"
   }
   local win = vim.api.nvim_open_win(buf, false, o)
 end

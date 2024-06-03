@@ -10,9 +10,6 @@ function M.setup(opts)
   local o = {
     relative = "editor",
     width = 10,
-    height =  2,
-    col = 0,
-    row = 1,
     anchor = "NW",
     split = "left"
   }

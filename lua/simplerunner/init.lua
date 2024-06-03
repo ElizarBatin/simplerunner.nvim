@@ -11,11 +11,8 @@ function split_string(input, sep)
   return t
 end
 
-
-function M.setup(opts)
-  opts = opts or {}
-  print("Hello world!")
-  local handle = io.popen("whoami")
+function run()
+  local handle = io.popen("./.simplerunner")
   local result = handle:read("*a")
   handle:close()
 
@@ -30,7 +27,14 @@ function M.setup(opts)
     anchor = "NW",
     split = "right"
   }
-  local win = vim.api.nvim_open_win(buf, false, o)
+  vim.api.nvim_open_win(buf, false, o)
+end
+
+
+function M.setup(opts)
+  opts = opts or {}
+  print("Hello world!")
+  vim.api.nvim_create_user_command("SimpleRunnerRun", run, {})
 end
 
 return M

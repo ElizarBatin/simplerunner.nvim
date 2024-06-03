@@ -14,6 +14,7 @@ function M.setup(opts)
     col = 0,
     row = 1,
     anchor = "NW",
+    split = "left"
   }
   local win = vim.api.nvim_open_win(buf, false, o)
 end

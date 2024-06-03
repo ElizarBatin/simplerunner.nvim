@@ -11,7 +11,7 @@ function split_string(input, sep)
   return t
 end
 
-function run()
+function M.run()
   local handle = io.popen("./.simplerunner")
   local result = handle:read("*a")
   handle:close()
@@ -37,7 +37,7 @@ function M.setup(opts)
   M.buf = vim.api.nvim_create_buf(false, true)
   vim.api.nvim_buf_set_name(M.buf, "SimpleRunner")
 
-  vim.api.nvim_create_user_command("SimpleRunnerRun", run, {})
+  vim.api.nvim_create_user_command("SimpleRunnerRun", M.run, {})
 end
 
 return M
